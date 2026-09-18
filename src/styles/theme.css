@@ -1,0 +1,52 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Syne+Tactile&display=swap');
+
+:root {
+  --color-primary: #7a52cd;
+  --color-primary-hover: #6842b8;
+  --color-accent: #d17bea;
+  --color-background: #ffffff;
+  --color-surface: #f7f4fc;
+  --color-border: #e4daf5;
+  --color-text-primary: #1a1523;
+  --color-text-secondary: #5c5568;
+  --color-success: #3fa96b;
+}
+
+.dark {
+  --color-primary: #a87de0;
+  --color-primary-hover: #bc97e8;
+  --color-accent: #e39ff2;
+  --color-background: #14101c;
+  --color-surface: #1f1a2b;
+  --color-border: #332b47;
+  --color-text-primary: #f3effa;
+  --color-text-secondary: #b0a6c4;
+  --color-success: #5fc98a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.will-animate {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
