@@ -16,9 +16,7 @@ export default function Hero() {
             Restoring Dignity, Rebuilding Lives
           </h1>
           <p className="mt-4 max-w-md text-[15px] text-[var(--text)]">
-            Springswone Foundation for the Homeless provides skills, training, and support
-            to help homeless individuals in Nigeria reintegrate into society — working
-            toward a Nigeria where no one is left without a place to belong.
+            Springswone Foundation for the Homeless provides skills, training, and support to empower homeless individuals in Nigeria to rebuild their lives and reintegrate into society, working toward a Nigeria where everyone has a place to belong.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -29,7 +27,7 @@ export default function Hero() {
             </Link>
             <Link
               to="/about"
-              className="rounded-full border border-[var(--text-h)] px-6 py-2.5 text-center text-[14px] font-semibold text-[var(--text-h)] transition-colors duration-300 hover:bg-[var(--text-h)] hover:text-white"
+              className="rounded-full border border-[var(--text-h)] px-6 py-2.5 text-center text-[14px] font-semibold text-[var(--text-h)] transition-colors duration-300 hover:bg-[var(--text-h)] hover:text-[var(--accent)]"
             >
               Learn More
             </Link>
