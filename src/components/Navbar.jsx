@@ -1,114 +1,134 @@
-import { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react";
-import LogoMark from "./LogoMark";
-import ThemeToggle from "./ThemeToggle";
+import { useState, useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
+import { Menu, X, Sun, Moon } from 'lucide-react'
+import { useTheme } from '../hooks/useTheme.js'
+import Logo from './Logo.jsx'
 
-const LINKS = [
-  { label: "Home", href: "#top" },
-  { label: "About", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Projects", href: "#projects" },
-  { label: "News", href: "#news" },
-  { label: "Contact", href: "#contact" },
-];
+const NAV_LINKS = [
+  { label: 'Home', to: '/' },
+  { label: 'About', to: '/about' },
+  { label: 'Programs', to: '/programs' },
+  { label: 'Projects', to: '/projects' },
+  { label: 'News', to: '/news' },
+  { label: 'Contact', to: '/contact' },
+]
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const { theme, toggleTheme } = useTheme()
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const linkClass = ({ isActive }) =>
+    `nav-link relative text-[14px] font-medium transition-colors ${
+      isActive ? 'text-[var(--accent)] is-active' : 'text-[var(--text)] hover:text-[var(--text-h)]'
+    }`
 
   return (
     <header
-      id="top"
-      className="sticky top-0 z-50 border-b border-border/70 bg-background/80 backdrop-blur-md"
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        scrolled
+          ? 'border-b border-[var(--border)] bg-[var(--bg)]/85 backdrop-blur-md shadow-sm'
+          : 'border-b border-transparent bg-[var(--bg)]'
+      }`}
     >
-      <div className="mx-auto flex h-18 max-w-6xl items-center justify-between gap-4 px-5 py-3 sm:px-8">
-        <a href="#top" className="flex items-center gap-2.5">
-          <LogoMark className="h-8 w-8 shrink-0" />
-          <span className="font-display leading-none text-text-primary">
-            <span className="block text-lg font-semibold">Springswone</span>
-            <span className="block text-[0.65rem] font-sans font-medium tracking-wide text-text-secondary">
-              Foundation
-            </span>
-          </span>
-        </a>
+      <nav className={`mx-auto flex w-full items-center justify-between px-6 transition-all duration-300 ${scrolled ? 'py-3' : 'py-4'}`}>
+        <NavLink to="/" className="transition-transform duration-300 hover:scale-[1.03]">
+          <Logo />
+        </NavLink>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          {LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="group relative text-sm font-medium text-text-secondary transition-colors hover:text-primary"
-            >
-              {link.label}
-              <span className="absolute -bottom-1 left-0 h-[2px] w-0 rounded-full bg-primary transition-all duration-300 group-hover:w-full" />
-            </a>
+        <ul className="hidden items-center gap-7 md:flex">
+          {NAV_LINKS.map((link) => (
+            <li key={link.to}>
+              <NavLink to={link.to} className={linkClass} end={link.to === '/'}>
+                {link.label}
+              </NavLink>
+            </li>
           ))}
-        </nav>
+        </ul>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <ThemeToggle />
-          <a
-            href="#donate"
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-primary/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary-hover hover:shadow-md hover:shadow-primary/40"
-          >
-            Donate
-          </a>
-        </div>
-
-        <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
+        <div className="hidden items-center gap-4 md:flex">
           <button
             type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Toggle menu"
-            aria-expanded={open}
-            className="relative flex h-10 w-10 items-center justify-center rounded-full border border-border text-text-primary transition-colors hover:border-primary"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="theme-toggle relative flex h-9 w-9 items-center justify-center overflow-hidden rounded-full text-[var(--text)] hover:bg-[var(--code-bg)]"
           >
-            <Menu
-              className={`absolute h-5 w-5 transition-all duration-300 ${
-                open ? "rotate-90 scale-0 opacity-0" : "rotate-0 scale-100 opacity-100"
-              }`}
-            />
-            <X
-              className={`absolute h-5 w-5 transition-all duration-300 ${
-                open ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"
-              }`}
-            />
+            <Sun size={16} className={`absolute transition-all duration-300 ${theme === 'dark' ? 'rotate-0 opacity-100' : 'rotate-90 opacity-0'}`} />
+            <Moon size={16} className={`absolute transition-all duration-300 ${theme === 'dark' ? '-rotate-90 opacity-0' : 'rotate-0 opacity-100'}`} />
           </button>
+          <NavLink
+            to="/donate"
+            className="rounded-full bg-[var(--accent)] px-5 py-2 text-[14px] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--accent-hover)]"
+          >
+            Donate
+          </NavLink>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          className="relative h-9 w-9 text-[var(--text-h)] md:hidden"
+        >
+          <X size={20} className={`absolute inset-0 m-auto transition-all duration-300 ${open ? 'rotate-0 opacity-100' : 'rotate-90 opacity-0'}`} />
+          <Menu size={20} className={`absolute inset-0 m-auto transition-all duration-300 ${open ? '-rotate-90 opacity-0' : 'rotate-0 opacity-100'}`} />
+        </button>
+      </nav>
+
+      <div
+        className={`overflow-hidden border-t border-[var(--border)] transition-all duration-300 ease-out md:hidden ${
+          open ? 'max-h-96 opacity-100' : 'max-h-0 border-t-0 opacity-0'
+        }`}
+      >
+        <ul className="flex flex-col gap-4 px-6 py-5">
+          {NAV_LINKS.map((link, i) => (
+            <li
+              key={link.to}
+              className={`transition-all duration-300 ${open ? 'translate-x-0 opacity-100' : '-translate-x-3 opacity-0'}`}
+              style={{ transitionDelay: open ? `${i * 60}ms` : '0ms' }}
+            >
+              <NavLink to={link.to} className={linkClass} onClick={() => setOpen(false)} end={link.to === '/'}>
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+        <div className="px-6 pb-5">
+          <NavLink
+            to="/donate"
+            onClick={() => setOpen(false)}
+            className="block w-full rounded-full bg-[var(--accent)] px-5 py-2.5 text-center text-[14px] font-semibold text-white"
+          >
+            Donate
+          </NavLink>
         </div>
       </div>
 
-      <div
-        className={`overflow-hidden border-t border-border/70 transition-[max-height] duration-300 ease-in-out md:hidden ${
-          open ? "max-h-96" : "max-h-0"
-        }`}
-      >
-        <nav className="flex flex-col gap-1 px-5 py-4">
-          {LINKS.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="rounded-lg px-3 py-2.5 text-sm font-medium text-text-secondary transition-colors hover:bg-surface hover:text-primary"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="#donate"
-            onClick={() => setOpen(false)}
-            className="mt-2 rounded-full bg-primary px-5 py-2.5 text-center text-sm font-semibold text-white"
-          >
-            Donate
-          </a>
-        </nav>
-      </div>
+      <style>{`
+        .nav-link::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          height: 2px;
+          width: 100%;
+          background: var(--accent);
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nav-link:hover::after,
+        .nav-link.is-active::after {
+          transform: scaleX(1);
+        }
+      `}</style>
     </header>
-  );
+  )
 }
