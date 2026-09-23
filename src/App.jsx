@@ -1,6 +1,5 @@
-import HomePage from "./HomePage";
-import "./styles/theme.css";
+import AppRoutes from './routes/AppRoutes.jsx'
 
 export default function App() {
-  return <HomePage />;
+  return <AppRoutes />
 }
