@@ -13,10 +13,7 @@ export default function AboutPreview() {
           About Springswone Foundation
         </h2>
         <p className="mt-3 text-[14px] leading-relaxed text-[var(--text)] sm:text-[15px]">
-          Springswone Foundation for the Homeless is a not-for-profit, non-political
-          organisation based in Lagos, Nigeria, committed to providing the necessary
-          skills and support to help homeless individuals reintegrate into society —
-          and to reducing homelessness across Nigeria.
+          Springswone Foundation for the Homeless is a not-for-profit, non-political organisation based in Lagos, Nigeria, committed to equipping homeless individuals with the skills, resources, and support they need to rebuild their lives and reintegrate into society while working to reduce homelessness across Nigeria.
         </p>
         <Link
           to="/about"
