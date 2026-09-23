@@ -100,11 +100,22 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <div className="px-6 pb-5">
+
+        <div className="px-6 pb-5 flex items-center justify-between">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="theme-toggle relative flex h-10.5 w-20 items-center justify-center overflow-hidden rounded-sm bg-[var(--accent)] text-white"
+          >
+            <Sun size={16} className={`absolute transition-all duration-300 ${theme === 'dark' ? 'rotate-0 opacity-100' : 'rotate-90 opacity-0'}`} />
+            <Moon size={16} className={`absolute transition-all duration-300 ${theme === 'dark' ? '-rotate-90 opacity-0' : 'rotate-0 opacity-100'}`} />
+          </button>
+
           <NavLink
             to="/donate"
             onClick={() => setOpen(false)}
-            className="block w-full rounded-full bg-[var(--accent)] px-5 py-2.5 text-center text-[14px] font-semibold text-white"
+            className="block w-[70%] rounded-sm bg-[var(--accent)] px-5 py-2.5 text-center text-[14px] font-semibold text-white"
           >
             Donate
           </NavLink>
