@@ -1,10 +1,14 @@
 import PageHero from '../components/PageHero.jsx';
 import StatBar from '../components/StatBar.jsx';
+import AboutStatement from '../components/AboutStatement.jsx';
+import TrusteesSection from '../components/TrusteesSection.jsx';
 
 export default function About() {
   return (
     <div className="text-left">
       <PageHero title="About Us" crumb="Discover who we are" />
+
+      <AboutStatement />
 
       <div className="mx-auto max-w-[1126px] px-6 py-10">
         <div className="grid gap-8 py-10 sm:grid-cols-2">
@@ -23,11 +27,11 @@ export default function About() {
           </div>
         </div>
 
-        <div className="my-5">
+        <div className="my-10">
             <StatBar />
         </div>
 
-        <div className="mt-8 grid gap-4 pt-10 sm:grid-cols-2">
+        <div className="mt-8 grid gap-4 pt-17 pb-5 sm:grid-cols-2">
           <img
             src="https://images.pexels.com/photos/6647178/pexels-photo-6647178.jpeg?auto=compress&cs=tinysrgb&w=500"
             alt=""
@@ -46,6 +50,8 @@ export default function About() {
             </div>
         </div>
       </div>
+
+      <TrusteesSection />
     </div>
   )
 }
