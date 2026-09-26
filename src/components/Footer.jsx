@@ -28,14 +28,13 @@ export default function Footer() {
 
       <div className="relative mx-auto flex max-w-[1126px] flex-col items-center text-center">
         <Logo />
-        <p className="mt-4 max-w-md text-[13px] leading-relaxed text-white/70">
-          Providing skills, training, and support to help homeless individuals in Nigeria
-          reintegrate into society.
+        <p className="mt-4 max-w-md text-[14px] leading-relaxed text-white/70">
+          Everyone deserves a place to call home.
         </p>
 
         <nav className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {QUICK_LINKS.map((link) => (
-            <NavLink key={link.to} to={link.to} className="footer-link text-[13px] text-white/80">
+            <NavLink key={link.to} to={link.to} className="footer-link text-[14px] text-white/80">
               {link.label}
             </NavLink>
           ))}
@@ -53,16 +52,6 @@ export default function Footer() {
             </a>
           ))}
         </div>
-
-        {/* Theme toggle — mobile only, since the desktop nav already has one */}
-        <button
-          type="button"
-          onClick={toggleTheme}
-          className="mt-6 flex items-center gap-2 rounded-full border border-white/20 px-4 py-2 text-[13px] font-medium text-white/80 transition-colors hover:bg-white/10 sm:hidden"
-        >
-          {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
-          {theme === 'dark' ? 'Light mode' : 'Dark mode'}
-        </button>
 
         <p className="mt-8 text-[12px] text-white/50">
           © {new Date().getFullYear()} Springswone Foundation. All rights reserved.
