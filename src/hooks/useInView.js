@@ -1,34 +1,24 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react'
 
-/**
- * Fires once, the first time the referenced element enters the viewport.
- * Used to trigger count-up numbers and one-off reveals without re-running
- * on every scroll pass.
- */
-export default function useInView(options = { threshold: 0.35 }) {
-  const ref = useRef(null);
-  const [inView, setInView] = useState(false);
+export function useInView() {
+  const ref = useRef(null)
+  const [inView, setInView] = useState(false)
 
   useEffect(() => {
-    const node = ref.current;
-    if (!node) return undefined;
+    const el = ref.current
+    if (!el) return
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true)
+          obs.disconnect()
+        }
+      },
+      { threshold: 0.2 }
+    )
+    obs.observe(el)
+    return () => obs.disconnect()
+  }, [])
 
-    if (typeof IntersectionObserver === "undefined") {
-      setInView(true);
-      return undefined;
-    }
-
-    const observer = new IntersectionObserver(([entry]) => {
-      if (entry.isIntersecting) {
-        setInView(true);
-        observer.disconnect();
-      }
-    }, options);
-
-    observer.observe(node);
-    return () => observer.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  return [ref, inView];
+  return [ref, inView]
 }
