@@ -20,7 +20,7 @@ export default function Programs() {
 
   return (
     <div className="text-left">
-      <PageHero title="Our Programs" crumb="Programs" />
+      <PageHero title="Our Programs" crumb="Creating practical solutions that empower communities and transform lives." />
 
       <div className="mx-auto max-w-[700px] px-6 py-16">
         <p className="text-[13px] text-[var(--text)]">
