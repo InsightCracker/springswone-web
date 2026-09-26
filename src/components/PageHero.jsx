@@ -6,7 +6,7 @@ export default function PageHero({ title, crumb, image = 6647178 }) {
       <img src={imgUrl} alt="" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-[var(--hero-overlay)]/80" />
       <div className="relative">
-        <h1 className="font-display text-[28px] text-white sm:text-[38px]">{title}</h1>
+        <h1 className="font-subhead text-[28px] text-white sm:text-[38px]">{title}</h1>
         <p className="mt-3 text-[15px] font-medium text-white/70">
           {crumb}
         </p>

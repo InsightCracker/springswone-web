@@ -9,7 +9,7 @@ export default function AboutPreview() {
         className="h-[260px] w-full rounded-sm object-cover"
       />
       <div>
-        <h2 className="font-display text-[24px] text-[var(--text-h)] sm:text-[28px]">
+        <h2 className="font-display text-[24px] leading-[1.2] text-[var(--text-h)] sm:text-[28px]">
           About Springswone Foundation
         </h2>
         <p className="mt-3 text-[14px] leading-relaxed text-[var(--text)] sm:text-[15px]">
