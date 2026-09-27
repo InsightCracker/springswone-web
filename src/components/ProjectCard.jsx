@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useInView } from '../hooks/useInView.js'
+import { ArrowRight } from 'lucide-react'
 
 export default function ProjectCard({ project, index }) {
   const [ref, inView] = useInView()
@@ -8,7 +9,7 @@ export default function ProjectCard({ project, index }) {
     <Link
       ref={ref}
       to={`/projects/${project.slug}`}
-      className={`project-card group block overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--code-bg)] text-left transition-all duration-500 ${
+      className={`project-card group block overflow-hidden rounded-sm border border-[var(--border)] bg-[var(--code-bg)] text-left transition-all duration-500 ${
         inView ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
       }`}
       style={{ transitionDelay: `${(index % 3) * 100}ms` }}
@@ -27,7 +28,9 @@ export default function ProjectCard({ project, index }) {
         </span>
         <h3 className="mt-3 text-[16px] font-semibold text-[var(--text-h)]">{project.title}</h3>
         <p className="mt-2 text-[13px] leading-relaxed text-[var(--text)]">{project.summary}</p>
-        <span className="project-link mt-3 inline-block text-[13px] font-semibold text-[var(--accent)]">Read more →</span>
+        <span className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-[var(--accent)]">
+            Read more <ArrowRight size={13} />
+        </span>
       </div>
 
       <style>{`

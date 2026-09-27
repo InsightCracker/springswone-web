@@ -21,7 +21,7 @@ export default function ProjectDetail() {
           <span className="mb-3 inline-block rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
             {project.status}
           </span>
-          <p className="font-display pt-4 text-[32px] leading-[1.1] text-white sm:text-[42px]">
+          <p className="font-subhead pt-4 text-[28px] leading-[1.1] text-white sm:text-[42px]">
             {project.title}
           </p>
         </div>

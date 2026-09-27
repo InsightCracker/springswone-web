@@ -7,20 +7,18 @@ export default function Projects() {
 
   return (
     <div className="text-left">
-      <PageHero title="Our Projects" crumb="Projects" />
+      <PageHero title="Our Projects" crumb="Discover the projects and initiatives creating opportunities, restoring hope, and empowering lives toward a brighter future." />
 
       <div className="mx-auto max-w-[1126px] px-6 py-16 sm:py-20">
-        <p className="text-[13px] font-semibold tracking-wide text-[var(--accent)]">PROJECTS</p>
-        <h2 className="font-display mt-2 text-[26px] text-[var(--text-h)] sm:text-[32px]">
+        <h2 className="font-styling text-center mt-2 text-[26px] text-[var(--text-h)] sm:text-[32px]">
           What we're building
         </h2>
 
         {error && <p className="mt-6 text-[13px] text-[var(--danger)]">{error}</p>}
-        {!error && loading && <p className="mt-10 text-[13px] text-[var(--text)]">Loading…</p>}
+        {!error && loading && <p className="mt-10 text-[15px] text-[var(--text)]">Loading…</p>}
         {!loading && !error && featuredProjects.length === 0 && (
-          <p className="mt-10 text-[13px] text-[var(--text)]">
-            No projects published yet — as a newly registered Foundation, we're building our
-            first ones now.
+          <p className="mt-10 text-[15px] text-[var(--text)]">
+            No projects published yet — check back soon.
           </p>
         )}
 
