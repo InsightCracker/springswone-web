@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import { NewsProvider } from './context/NewsContext.jsx'
 import { FeaturedProjectProvider } from './context/FeaturedProjectsContext.jsx'
+import { ProgramProvider } from './context/ProgramsContext.jsx'
 import './index.css'
 
 createRoot(document.getElementById('root')).render(
@@ -11,7 +12,9 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <NewsProvider>
         <FeaturedProjectProvider>
-          <App />
+          <ProgramProvider>
+            <App />
+          </ProgramProvider>
         </FeaturedProjectProvider>
       </NewsProvider>
     </BrowserRouter>
