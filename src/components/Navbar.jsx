@@ -6,11 +6,11 @@ import Logo from './Logo.jsx'
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
-  { label: 'About', to: '/about' },
-  { label: 'Programs', to: '/programs' },
-  { label: 'Projects', to: '/projects' },
+  { label: 'About Us', to: '/about' },
+  { label: 'Our Programs', to: '/programs' },
+  { label: 'Featured Projects', to: '/projects' },
   { label: 'News', to: '/news' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Contact Us', to: '/contact' },
 ]
 
 export default function Navbar() {

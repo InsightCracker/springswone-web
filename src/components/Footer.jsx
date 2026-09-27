@@ -5,10 +5,10 @@ import { useTheme } from '../hooks/useTheme.js'
 import Logo from './Logo.jsx'
 
 const QUICK_LINKS = [
-  { label: 'About', to: '/about' },
-  { label: 'Programs', to: '/programs' },
-  { label: 'Projects', to: '/projects' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'About Us', to: '/about' },
+  { label: 'Our Programs', to: '/programs' },
+  { label: 'Featured Projects', to: '/projects' },
+  { label: 'Contact Us', to: '/contact' },
 ]
 
 const SOCIALS = [
