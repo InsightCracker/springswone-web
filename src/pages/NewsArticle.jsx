@@ -18,12 +18,12 @@ export default function NewsArticle() {
         <img src={post.image} alt="" className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-[var(--hero-overlay)]/70" />
         <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-          <p className="text-[12px] font-semibold tracking-wide text-[var(--secondary)]">
+          <p className="mb-3 inline-block rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">
             {post.categories.join(', ').toUpperCase()}
           </p>
-          <h1 className="font-display mt-2 max-w-2xl text-[28px] text-white sm:text-[38px]">
+          <p className="font-subhead mt-2 max-w-2xl text-[28px] text-white sm:text-[38px]">
             {post.title}
-          </h1>
+          </p>
         </div>
       </div>
 

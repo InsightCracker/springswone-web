@@ -7,18 +7,17 @@ export default function News() {
 
   return (
     <div className="text-left">
-      <PageHero title="News" crumb="News" />
+      <PageHero title="News" crumb="Stay informed about our work, impact, and the stories that inspire change." />
 
       <div className="mx-auto max-w-[1126px] px-6 py-16 sm:py-20">
-        <p className="text-[13px] font-semibold tracking-wide text-[var(--accent)]">UPDATES</p>
-        <h2 className="font-display mt-2 text-[26px] text-[var(--text-h)] sm:text-[32px]">
+        <h2 className="font-styling text-center mt-2 text-[26px] text-[var(--text-h)] sm:text-[32px]">
           Latest from Springswone
         </h2>
 
         {error && <p className="mt-6 text-[13px] text-[var(--danger)]">{error}</p>}
-        {!error && loading && <p className="mt-10 text-[13px] text-[var(--text)]">Loading…</p>}
+        {!error && loading && <p className="mt-10 text-[15px] text-[var(--text)]">Loading…</p>}
         {!loading && !error && news.length === 0 && (
-          <p className="mt-10 text-[13px] text-[var(--text)]">
+          <p className="mt-10 text-[15px] text-[var(--text)]">
             No news posted yet — check back soon.
           </p>
         )}
