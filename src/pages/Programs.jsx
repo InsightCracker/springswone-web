@@ -25,7 +25,7 @@ export default function Programs() {
     <div className="text-left">
       <PageHero title="Our Programs" crumb="Empowering lives through practical skills, meaningful support, and opportunities for a brighter and more independent future." />
 
-      <div className="mx-auto max-w-[70%] px-6 py-16">
+      <div className="mx-auto max-w-[800px] px-6 py-16">
         <h2 className="font-styling text-center mt-2 text-[26px] text-[var(--text-h)] sm:text-[32px]">
           Our Core Area of Impact
         </h2>
