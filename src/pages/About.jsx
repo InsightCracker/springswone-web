@@ -6,7 +6,7 @@ import TrusteesSection from '../components/TrusteesSection.jsx';
 export default function About() {
   return (
     <div className="text-left">
-      <PageHero title="About Us" crumb="Discover who we are" />
+      <PageHero title="About Us" crumb="Discover who we are, what we stand for, and how we are working to create a future where everyone has the opportunity to thrive." />
 
       <AboutStatement />
 
