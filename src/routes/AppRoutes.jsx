@@ -9,6 +9,7 @@ import News from '../pages/News.jsx'
 import NewsArticle from '../pages/NewsArticle.jsx'
 import Projects from '../pages/Projects.jsx'
 import ProjectDetail from '../pages/ProjectDetail.jsx'
+import ProgramDetail from '../pages/ProgramDetail.jsx'
 
 export default function AppRoutes() {
   return (
@@ -23,6 +24,7 @@ export default function AppRoutes() {
         <Route path="/news/:slug" element={<NewsArticle />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/:slug" element={<ProjectDetail />} />
+        <Route path="/programs/:slug" element={<ProgramDetail />} />
       </Route>
     </Routes>
   )
