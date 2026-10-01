@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { FaLinkedinIn, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
-import { MapPin, Send } from 'lucide-react'
+import { PhoneCall, Send } from 'lucide-react'
 import PageHero from '../components/PageHero.jsx'
 import { useInView } from '../hooks/useInView.js'
 import { submitContactForm } from '../services/contactService.js'
@@ -55,27 +54,27 @@ export default function Contact() {
               reach out and our team will respond as soon as we can.
             </p>
 
-            <div className="mt-6 flex items-start gap-3">
-              <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--accent-bg)]">
-                <MapPin size={16} className="text-[var(--accent)]" />
+            <div className="mt-6 flex items-center gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--accent-bg)]">
+                <PhoneCall size={16} className="text-[var(--accent)]" />
               </span>
-              <p className="text-[14px] leading-relaxed text-[var(--text)]">
-                2, Oludemunren Street, off Benson Estate,
-                <br />
-                Lagos, Lagos State, Nigeria
-              </p>
+              <a
+                href="tel:+2349036190420"
+                className="text-[15px] font-[500] leading-relaxed text-[var(--text)] transition-colors hover:text-[var(--accent)]"
+              >
+                +234 906 017 4166
+              </a>
             </div>
 
             <div className="mt-6 flex items-center gap-3">
               {[
-                { Icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn' },
-                { Icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook' },
-                { Icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
-                { Icon: FaYoutube, href: 'https://youtube.com', label: 'YouTube' },
+                { Icon: FaInstagram, href: 'https://instagram.com/springswone_foundation2023', label: 'Instagram' },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="social-icon flex h-10 w-10 items-center justify-center rounded-full bg-[var(--code-bg)] text-[var(--text-h)]"
                 >
@@ -121,7 +120,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === 'sending'}
-              className="relative flex items-center gap-2 rounded-full bg-[var(--accent)] px-7 py-3 text-[14px] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] disabled:opacity-60"
+              className="relative flex items-center cursor-pointer gap-2 rounded-full bg-[var(--accent)] px-7 py-3 text-[14px] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] disabled:opacity-60"
             >
               {status === 'sending' ? 'Sending…' : 'Send Message'}
               {status !== 'sending' && <Send size={15} />}
