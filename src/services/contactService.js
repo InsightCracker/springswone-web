@@ -1,4 +1,4 @@
-const WEB3FORMS_ACCESS_KEY = 'YOUR_ACCESS_KEY_HERE' // get one free at web3forms.com
+const WEB3FORMS_ACCESS_KEY = '5895edbc-3300-4523-8aa1-56bf224e8400'
 
 export async function submitContactForm(form) {
   const res = await fetch('https://api.web3forms.com/submit', {
@@ -7,7 +7,7 @@ export async function submitContactForm(form) {
     body: JSON.stringify({
       access_key: WEB3FORMS_ACCESS_KEY,
       subject: form.subject ? `New contact form: ${form.subject}` : 'New contact form submission',
-      from_name: 'Springswone Foundation website',
+      from_name: 'Springswone Foundation',
       name: form.name,
       email: form.email,
       phone: form.phone || 'Not provided',
