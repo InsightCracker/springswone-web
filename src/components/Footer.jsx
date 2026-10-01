@@ -1,7 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { FaLinkedinIn, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
-import { Sun, Moon } from 'lucide-react'
-import { useTheme } from '../hooks/useTheme.js'
+import { FaPhone, FaInstagram, FaYoutube } from 'react-icons/fa'
 import Logo from './Logo.jsx'
 
 const QUICK_LINKS = [
@@ -12,15 +10,11 @@ const QUICK_LINKS = [
 ]
 
 const SOCIALS = [
-  { Icon: FaLinkedinIn, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { Icon: FaFacebookF, href: 'https://facebook.com', label: 'Facebook' },
-  { Icon: FaInstagram, href: 'https://instagram.com', label: 'Instagram' },
-  { Icon: FaYoutube, href: 'https://youtube.com', label: 'YouTube' },
+  { Icon: FaInstagram, href: 'https://instagram.com/Springswone_Foundation2023', label: 'Instagram' },
+  { Icon: FaPhone, href: 'tel:+2349036190420', label: 'Phone' },
 ]
 
 export default function Footer() {
-  const { theme, toggleTheme } = useTheme()
-
   return (
     <footer className="relative overflow-hidden bg-[var(--brand-purple)] px-6 py-14">
       <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white opacity-[0.06]" aria-hidden="true" />
