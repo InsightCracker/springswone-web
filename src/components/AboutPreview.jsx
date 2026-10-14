@@ -4,8 +4,8 @@ export default function AboutPreview() {
   return (
     <div className="mx-auto my-20 grid max-w-[1126px] items-center gap-10 px-6 sm:grid-cols-2">
       <img
-        src="https://images.pexels.com/photos/6647178/pexels-photo-6647178.jpeg?auto=compress&cs=tinysrgb&w=600"
-        alt=""
+        src="/Img/hydrate-hope-banner.jpg"
+        alt="Greenway Pathways"
         className="h-[260px] w-full rounded-sm object-cover"
       />
       <div>
