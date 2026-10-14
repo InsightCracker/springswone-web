@@ -1,9 +1,9 @@
 export default function PageHero({ title, crumb, image = 6647178 }) {
-  const imgUrl = `https://images.pexels.com/photos/${image}/pexels-photo-${image}.jpeg?auto=compress&cs=tinysrgb&w=1600`
+  const imgUrl = `/Img/team-photo-banner.jpg`
 
   return (
     <section className="relative flex h-[220px] items-center justify-start overflow-hidden px-6 text-left sm:h-[240px] sm:justify-center sm:px-0 sm:text-center">
-      <img src={imgUrl} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={imgUrl} alt="Hero" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-[var(--hero-overlay)]/80" />
       <div className="relative">
         <p className="font-subhead text-[28px] text-white sm:text-[38px]">{title}</p>
