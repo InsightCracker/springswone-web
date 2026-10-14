@@ -33,7 +33,7 @@ export default function About() {
 
         <div className="mt-8 grid gap-4 pt-17 pb-5 sm:grid-cols-2">
           <img
-            src="https://images.pexels.com/photos/6647178/pexels-photo-6647178.jpeg?auto=compress&cs=tinysrgb&w=500"
+            src="/Img/campaign-rally.jpg"
             alt=""
             className="h-40 w-full rounded-sm object-cover"
           />
