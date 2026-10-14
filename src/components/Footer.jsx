@@ -5,7 +5,7 @@ import Logo from './Logo.jsx'
 const QUICK_LINKS = [
   { label: 'About Us', to: '/about' },
   { label: 'Our Programs', to: '/programs' },
-  { label: 'Featured Projects', to: '/projects' },
+  { label: 'Our Impact', to: '/projects' },
   { label: 'Contact Us', to: '/contact' },
 ]
 
