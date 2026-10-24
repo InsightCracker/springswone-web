@@ -7,7 +7,7 @@ export default function Projects() {
 
   return (
     <div className="text-left">
-      <PageHero title="Our Projects" crumb="Discover the projects and initiatives creating opportunities, restoring hope, and empowering lives toward a brighter future." />
+      <PageHero title="Our Impact" crumb="Discover the projects and initiatives creating opportunities, restoring hope, and empowering lives toward a brighter future." />
 
       <div className="mx-auto max-w-[1126px] px-6 py-16 sm:py-20">
         <h2 className="font-styling text-center mt-2 text-[26px] text-[var(--text-h)] sm:text-[32px]">
