@@ -22,9 +22,9 @@ export default function CallToAction() {
             <Heart size={22} className="text-[var(--secondary)]" fill="currentColor" />
           </span>
 
-          <h2 className="font-display mt-6 text-[26px] leading-[1.3] text-white sm:text-[32px]">
+          <p className="font-display mt-6 text-[26px] leading-[1.3] text-white sm:text-[32px]">
             Help someone rebuild their life today
-          </h2>
+          </p>
           <p className="mt-4 max-w-md text-[15px] leading-relaxed text-white/75">
             Every gift and every hour volunteered helps a homeless individual in Nigeria take
             a real step toward reintegration and a place to belong.
