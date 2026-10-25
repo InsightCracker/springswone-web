@@ -208,7 +208,7 @@ export default function Programs() {
       ))}
 
       {/* Real, database-backed programs — appears once any exist */}
-      <div className="mx-auto max-w-[1126px] px-6 pt-16 pb-16">
+      <div className="bg-[var(--bg)] px-6 pt-16 pb-16">
         {error && <p className="text-[13px] text-[var(--danger)]">{error}</p>}
         {!error && loading && <p className="text-[15px] text-[var(--text)]">Loading programs…</p>}
 
@@ -221,7 +221,7 @@ export default function Programs() {
         )}
 
         {!loading && programs.length > 0 && (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto max-w-[1126px] grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {programs.map((program, i) => (
               <ProgramCard key={program.slug} program={program} index={i} />
             ))}
