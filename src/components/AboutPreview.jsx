@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom'
 
 export default function AboutPreview() {
   return (
-    <div className="mx-auto my-20 grid max-w-[1126px] items-center gap-10 px-6 sm:grid-cols-2">
+    <div className="mx-auto my-20 grid max-w-[1126px] items-center gap-10 px-6 sm:grid-cols-2 sm:pt-15">
       <img
         src="/Img/hydrate-hope-banner.jpg"
         alt="Greenway Pathways"
-        className="h-[260px] w-full rounded-sm object-cover"
+        className="h-[300px] sm:h-[350px] w-full rounded-sm object-cover"
       />
       <div>
         <p className="text-[13px] font-semibold tracking-wide text-[var(--accent)]">
