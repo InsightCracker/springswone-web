@@ -46,9 +46,6 @@ export default function Projects() {
 
       <div className="mx-auto max-w-[1126px] px-6 py-16 sm:py-20">
         <div className="text-center">
-          <p className="text-[12px] font-semibold tracking-[0.14em] text-[var(--accent)]">
-            OUR PROJECTS
-          </p>
           <h2 className="font-styling mt-2 text-[26px] text-[var(--text-h)] sm:text-[32px]">
             What we're building
           </h2>
