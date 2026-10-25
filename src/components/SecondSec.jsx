@@ -1,4 +1,3 @@
-import { ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useInView } from '../hooks/useInView.js'
 import Logo from './Logo.jsx'
@@ -7,7 +6,7 @@ export default function MissionSection() {
   const [ref, inView] = useInView()
 
   return (
-    <section ref={ref} className="relative isolate overflow-hidden px-5 py-16 sm:px-6 sm:py-20">
+    <section ref={ref} className="relative isolate overflow-hidden py-16 sm:px-6 sm:py-20">
       <div className="mx-auto grid items-center gap-12 px-6 sm:grid-cols-2 sm:gap-6 sm:px-0">
         <div
           className={`relative order-2 h-[320px] transition-all duration-700 sm:order-1 sm:h-[480px] ${
@@ -56,7 +55,6 @@ export default function MissionSection() {
             className="group mt-6 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[var(--accent)]"
           >
             Our Mission
-            <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
       </div>
