@@ -9,7 +9,7 @@ export default function CallToAction() {
     <section className="px-6 py-16 sm:py-20">
       <div
         ref={ref}
-        className={`relative mx-auto max-w-[900px] overflow-hidden rounded-3xl bg-[var(--brand-purple)] px-8 py-14 transition-all duration-700 sm:px-14 ${
+        className={`relative mx-auto max-w-[900px] overflow-hidden rounded-2xl bg-[var(--brand-purple)] px-8 py-14 transition-all duration-700 sm:px-14 ${
           inView ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
         }`}
       >

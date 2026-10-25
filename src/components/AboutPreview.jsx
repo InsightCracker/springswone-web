@@ -10,7 +10,7 @@ export default function AboutPreview() {
       />
       <div>
         <p className="text-[13px] font-semibold tracking-wide text-[var(--accent)]">
-          Understanding Homelessness &nbsp;•&nbsp; Advancing Human Dignity 
+          UNDERSTANDING HOMELESSNESS &nbsp;•&nbsp; ADVANCING HUMAN DIGNITY 
         </p>
         <h2 className="font-display mt-3 text-[24px] leading-[1.2] text-[var(--text-h)] sm:text-[28px]">
           About Springswone Foundation
