@@ -119,7 +119,7 @@ function ProgrammeSection({ programme, index }) {
           </span>
         </div>
 
-        <h3 className="font-styling mt-4 text-[22px] leading-[1.2] text-[var(--text-h)] sm:text-[26px]">
+        <h3 className="font-styling mt-4 text-[22px] leading-[1.3] text-[var(--text-h)] sm:text-[26px]">
           {programme.title}
         </h3>
         <p className="mt-1.5 text-[14px] font-medium italic text-[var(--accent)] sm:text-[15px]">
@@ -184,7 +184,7 @@ export default function Programs() {
 
       {/* Intro */}
       <div className="mx-auto max-w-[1126px] px-6 py-16 text-center sm:py-20">
-        <h2 className="font-styling mt-2 text-[26px] leading-[1.2] text-[var(--text-h)] sm:text-[32px]">
+        <h2 className="font-styling mt-2 text-left sm:text-center text-[26px] leading-[1.4] text-[var(--text-h)] sm:text-[32px]">
           Practical Action. Human Dignity. Lasting Change.
         </h2>
         <div className="mt-5 space-y-4 text-left sm:text-center">
@@ -232,9 +232,9 @@ export default function Programs() {
       {/* Closing CTA */}
       <section className="bg-[var(--accent)] px-6 py-16 text-center sm:py-20">
         <div className="mx-auto max-w-[1126px]">
-          <h2 className="font-styling text-[24px] leading-[1.2] text-white sm:text-[30px]">
+          <p className="font-styling text-[24px] leading-[1.4] text-white sm:text-[30px]">
             Lasting Change Takes Collective Effort.
-          </h2>
+          </p>
           <p className="mt-4 text-[14px] leading-relaxed text-white/80 sm:text-[15px]">
             Every program represents an opportunity to make a difference, whether by
             meeting an immediate need, changing a perspective, building a skill, or helping
