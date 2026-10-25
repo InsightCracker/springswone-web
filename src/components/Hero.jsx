@@ -10,26 +10,26 @@ export default function Hero() {
         {/* Text side */}
         <div>
           <p className="text-[13px] font-semibold tracking-wide text-[var(--accent)]">
-            HOPE &nbsp;•&nbsp; OPPORTUNITY &nbsp;•&nbsp; LASTING CHANGE
+            HOPE &nbsp;•&nbsp; DIGNITY &nbsp;•&nbsp; HUMAN POSSIBLITIES
           </p>
           <h1 className="font-display mt-3 text-[36px] leading-[1.1] text-[var(--text-h)] sm:text-[44px]">
             Restoring Dignity, Rebuilding Lives
           </h1>
           <p className="mt-4 max-w-md text-[15px] text-[var(--text)]">
-            Springswone Foundation for the Homeless provides skills, training, and support to empower homeless individuals in Nigeria to rebuild their lives and reintegrate into society, working toward a Nigeria where everyone has a place to belong.
+            Springswone Foundation for the Homeless works to address homelessness in Nigeria through advocacy, skills development, and pathways to sustainable reintegration.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link
               to="/donate"
               className="rounded-full bg-[var(--accent)] px-6 py-2.5 text-center text-[14px] font-semibold text-white transition-transform duration-300 hover:-translate-y-0.5"
             >
-              Support Our Work
+              Support Our Mission
             </Link>
             <Link
               to="/about"
               className="rounded-full border border-[var(--text-h)] px-6 py-2.5 text-center text-[14px] font-semibold text-[var(--text-h)] transition-colors duration-300 hover:bg-[var(--text-h)] hover:text-[var(--accent)]"
             >
-              Learn More
+              Discover Our Work
             </Link>
           </div>
         </div>
