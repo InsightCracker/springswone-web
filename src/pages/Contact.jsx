@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { FaLinkedinIn, FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
-import { PhoneCall, Send } from 'lucide-react'
+import { FaPhone, FaInstagram } from 'react-icons/fa'
+import { Send } from 'lucide-react'
 import PageHero from '../components/PageHero.jsx'
 import { useInView } from '../hooks/useInView.js'
 import { submitContactForm } from '../services/contactService.js'
@@ -10,6 +10,11 @@ const FIELDS = [
   { name: 'email', placeholder: 'Email address', required: true, type: 'email' },
   { name: 'phone', placeholder: 'Phone number', required: false, type: 'text' },
   { name: 'subject', placeholder: 'Subject', required: false, type: 'text' },
+]
+
+const SOCIALS = [
+  { Icon: FaInstagram, href: 'https://instagram.com/Springswone_Foundation2023', label: 'Instagram' },
+  { Icon: FaPhone, href: 'tel:+2349036190420', label: 'Phone' },
 ]
 
 export default function Contact() {
@@ -54,31 +59,15 @@ export default function Contact() {
               reach out and our team will respond as soon as we can.
             </p>
 
-            <div className="mt-6 flex items-center gap-3">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--accent-bg)]">
-                <PhoneCall size={16} className="text-[var(--accent)]" />
-              </span>
-              <a
-                href="tel:+2349036190420"
-                className="text-[15px] font-[500] leading-relaxed text-[var(--text)] transition-colors hover:text-[var(--accent)]"
-              >
-                +234 906 017 4166
-              </a>
-            </div>
-
-            <div className="mt-6 flex items-center gap-3">
-              {[
-                { Icon: FaInstagram, href: 'https://instagram.com/springswone_foundation2023', label: 'Instagram' },
-              ].map(({ Icon, href, label }) => (
+            <div className="mt-6 flex items-center gap-4">
+              {SOCIALS.map(({ Icon, href, label }) => (
                 <a
                   key={label}
                   href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   aria-label={label}
-                  className="social-icon flex h-10 w-10 items-center justify-center rounded-full bg-[var(--code-bg)] text-[var(--text-h)]"
+                  className="social-icon flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white/70"
                 >
-                  <Icon size={15} />
+                  <Icon size={14} />
                 </a>
               ))}
             </div>
