@@ -1,6 +1,8 @@
 import PageHero from '../components/PageHero.jsx';
+import ApproachSection from '../components/Approach.jsx';
 import StatBar from '../components/StatBar.jsx';
 import AboutStatement from '../components/AboutStatement.jsx';
+import GovernanceSection from '../components/Governance.jsx';
 import TrusteesSection from '../components/TrusteesSection.jsx';
 
 export default function About() {
@@ -11,27 +13,45 @@ export default function About() {
       <AboutStatement />
 
       <div className="mx-auto max-w-[1126px] px-6 py-10">
-        <div className="grid gap-8 py-10 sm:grid-cols-2">
-          <div className='bg-[var(--accent-bg)] rounded-sm p-10'>
+        <div className="grid gap-8 py-10 md:grid-cols-2">
+          <div className="rounded-sm bg-[var(--accent-bg)] p-10">
             <h2 className="font-styling text-[25px] font-semibold text-[var(--text-h)] md:text-[28px]">Our Mission</h2>
-            <p className="mt-2 text-[15px] leading-relaxed text-[var(--text)] md:text-[16px]">
-              To provide strategies to combat homelessnes and ensure homeless victims are reintegration and accepted into the society.
+
+            <p className="mt-5 text-[12px] font-bold tracking-[0.14em] text-[var(--accent)]">
+              WHY WE EXIST
+            </p>
+
+            <h2 className="font-display mt-2 text-[15px] font-semibold leading-[1.4] text-[var(--text-h)] md:text-[20px]">
+              To Advance Dignity and Create Pathways Beyond Homelessness.
+            </h2>
+
+            <p className="mt-4 text-[15px] leading-relaxed text-[var(--text)] md:text-[16px]">
+              Our mission is to address homelessness through advocacy, skills development, and
+              strategic community partnerships while advancing opportunities for people
+              experiencing homelessness to rebuild their lives, achieve greater independence,
+              and reintegrate into society.
             </p>
           </div>
 
-          <div className='bg-[var(--accent-bg)] rounded-sm p-10'>
+          <div className="rounded-sm bg-[var(--accent-bg)] p-10">
             <h2 className="font-styling text-[25px] font-semibold text-[var(--text-h)] md:text-[28px]">Our Vision</h2>
-            <p className="mt-2 text-[15px] leading-relaxed text-[var(--text)] md:text-[16px]">
-              To eradicate the problem of homelessness in Nigeria by providing homeless victim with a home.
+
+            <p className="mt-5 text-[12px] font-bold tracking-[0.14em] text-[var(--accent)]">
+              THE FUTURE WE SEEK
+            </p>
+
+            <h2 className="font-display mt-2 text-[15px] font-semibold leading-[1.4] text-[var(--text-h)] md:text-[20px]">
+              A Nigeria Where Everyone Has a Place to Belong
+            </h2>
+
+            <p className="mt-4 text-[15px] leading-relaxed text-[var(--text)] md:text-[16px]">
+              We envision a society where homelessness is significantly reduced, every individual is treated with dignity, and people experiencing homelessness have access to the support, opportunities, and pathways they need to secure stable living conditions and participate fully in society.
             </p>
           </div>
         </div>
+        
 
-        <div className="my-10">
-            <StatBar />
-        </div>
-
-        <div className="mt-8 grid gap-4 pt-17 pb-5 sm:grid-cols-2">
+        {/* <div className="mt-8 grid gap-4 pt-17 pb-5 sm:grid-cols-2">
           <img
             src="/Img/campaign-rally.jpg"
             alt=""
@@ -48,8 +68,14 @@ export default function About() {
                 Real change happens when people are given the tools to rebuild their lives.
             </p>
             </div>
-        </div>
+        </div> */}
       </div>
+
+      <ApproachSection />
+
+      <StatBar />
+
+      <GovernanceSection />
 
       <TrusteesSection />
     </div>
