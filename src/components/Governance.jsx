@@ -12,8 +12,8 @@ export default function GovernanceSection() {
             inView ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
         >
-          <p className="flex items-center gap-2 text-[12px] font-bold tracking-[0.14em] text-[var(--accent)]">
-            OUR GOVERNANCE
+          <p className="inline-flex items-center gap-1.5 rounded-full border border-[var(--accent)]/25 bg-[var(--bg)] px-3 py-1 text-[12px] font-semibold text-[var(--accent)]">
+            Our Governance
           </p>
           <h2 className="font-display mt-3 text-[20px] leading-[1.4] text-[var(--text-h)] sm:text-[25px]">
             Built on Responsibility. Guided by Accountability.
