@@ -7,19 +7,16 @@ const AIMS = [
     icon: Megaphone,
     title: 'Advocacy & Awareness',
     description: 'Challenging misconceptions and bringing the realities of homelessness into public conversation.',
-    to: '/about',
   },
   {
     icon: GraduationCap,
     title: 'Skills & Opportunity',
     description: 'Working towards access to skills development and opportunities that can support independence.',
-    to: '/our-programs',
   },
   {
     icon: HomeIcon,
     title: 'Community & Reintegration',
     description: 'Building relationships and partnerships that support people experiencing homelessness as they work towards stability and belonging.',
-    to: '/our-approach',
   },
 ]
 
@@ -34,12 +31,12 @@ export default function AimsSection() {
             inView ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
         >
-          <p className="flex items-center justify-center gap-2 text-[12px] font-semibold tracking-[0.14em] text-[var(--accent)]">
+          <p className="flex items-center justify-center gap-2 text-[12px] font-bold tracking-[0.14em] text-[var(--accent)]">
             <span className="h-px w-8 bg-[var(--accent)]" />
             OUR AIMS
             <span className="h-px w-8 bg-[var(--accent)]" />
           </p>
-          <h2 className="font-display mt-3 text-[28px] leading-[1.15] text-[var(--text-h)] sm:text-[34px]">
+          <h2 className="font-display mt-3 text-[28px] leading-[1.15] text-[var(--text-h)] sm:text-[32px]">
             Real support. Lasting change.
           </h2>
           <p className="mt-3 text-[14px] leading-relaxed text-[var(--text)] sm:text-[15px]">
@@ -66,13 +63,6 @@ export default function AimsSection() {
                 <p className="mt-2 text-[14px] leading-relaxed text-[var(--text)]">
                   {aim.description}
                 </p>
-                <Link
-                  to={aim.to}
-                  className="group mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[var(--accent)]"
-                >
-                  Learn more
-                  <ArrowRight size={13} className="transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
               </div>
             )
           })}
