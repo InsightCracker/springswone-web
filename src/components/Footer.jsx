@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { FaPhone, FaInstagram, FaYoutube } from 'react-icons/fa'
+import { FaPhone, FaInstagram } from 'react-icons/fa'
 import Logo from './Logo.jsx'
 
 const QUICK_LINKS = [
