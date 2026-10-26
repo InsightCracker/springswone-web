@@ -11,7 +11,6 @@ const FILTERS = [
   { value: 'completed', label: 'Completed' },
 ]
 
-// Tolerates "In Development", "in_development", "in-development", etc.
 const normalise = (s) => String(s || '').toLowerCase().trim().replace(/[\s_]+/g, '-')
 
 export default function Projects() {
@@ -116,7 +115,7 @@ export default function Projects() {
         {!loading && !error && featuredProjects.length > 0 && visible.length === 0 && (
           <div className="mt-10 rounded-xl border border-dashed border-[var(--border)] bg-[var(--code-bg)] px-6 py-8 text-center">
             <p className="text-[15px] text-[var(--text)]">
-              No {activeLabel?.toLowerCase()} projects right now.
+              No {activeLabel} projects right now.
             </p>
             <button
               type="button"
